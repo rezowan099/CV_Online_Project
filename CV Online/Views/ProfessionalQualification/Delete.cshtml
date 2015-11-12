@@ -1,0 +1,56 @@
+﻿@model CV_Online.Models.ProfessionalQualification
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete Professional Qualification of @Html.DisplayFor(model => model.PersonalInformation.FirstName) @Html.DisplayFor(model => model.PersonalInformation.MiddleName) @Html.DisplayFor(model => model.PersonalInformation.LastName)</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>ProfessionalQualification</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Certification)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Certification.Title)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Institution)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Institution.Name)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Location)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Location)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.From)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.From)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.To)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.To)
+    </div>
+
+
+</fieldset>
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

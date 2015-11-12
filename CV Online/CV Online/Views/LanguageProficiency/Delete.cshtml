@@ -1,0 +1,46 @@
+﻿@model CV_Online.Models.LanguageProficiency
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>LanguageProficiency</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Reading)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Reading)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Writing)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Writing)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Speaking)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Speaking)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Language.Name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Language.Name)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

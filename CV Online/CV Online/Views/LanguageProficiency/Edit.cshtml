@@ -1,0 +1,61 @@
+﻿@model CV_Online.Models.LanguageProficiency
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>LanguageProficiency</legend>
+
+        @Html.HiddenFor(model => model.Id)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Reading)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Reading)
+            @Html.ValidationMessageFor(model => model.Reading)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Writing)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Writing)
+            @Html.ValidationMessageFor(model => model.Writing)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Speaking)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Speaking)
+            @Html.ValidationMessageFor(model => model.Speaking)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.LanguageId, "Language")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("LanguageId", String.Empty)
+            @Html.ValidationMessageFor(model => model.LanguageId)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

@@ -1,0 +1,60 @@
+﻿@model CV_Online.Models.ProfessionalQualification
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>ProfessionalQualification</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Institute)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Institute)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Location)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Location)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.From)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.From)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.To)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.To)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Certification.Title)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Certification.Title)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PersonalInformation.FathersName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PersonalInformation.FathersName)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

@@ -1,0 +1,57 @@
+﻿@model CV_Online.Models.ProfessionalQualification
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>ProfessionalQualification</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Institute)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Institute)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Location)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Location)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.From)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.From)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.To)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.To)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Certification.Title)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Certification.Title)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PersonalInformation.FathersName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PersonalInformation.FathersName)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

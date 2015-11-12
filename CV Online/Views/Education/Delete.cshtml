@@ -1,0 +1,91 @@
+﻿@model CV_Online.Models.Education
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete Educational Information of @Html.DisplayFor(model => model.PersonalInformation.FirstName) @Html.DisplayFor(model => model.PersonalInformation.MiddleName) @Html.DisplayFor(model => model.PersonalInformation.LastName)</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>Education</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.EducationLevel)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EducationLevel.Level)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ConcentrationMajorGroup)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ConcentrationMajorGroup.Type)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Institution)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Institution.Name)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Location)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Location)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ExamDegreeTitle)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ExamDegreeTitle)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Result)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Result)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Scale)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Scale)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.YearOfPassing)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.YearOfPassing)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Duration)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Duration)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Achievement)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Achievement)
+    </div>
+
+    
+</fieldset>
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

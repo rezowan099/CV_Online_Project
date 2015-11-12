@@ -1,0 +1,78 @@
+﻿@model CV_Online.Models.EmploymentHistory
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>EmploymentHistory</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CompanyName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CompanyName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CompanyBusiness)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CompanyBusiness)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CompanyLocation)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CompanyLocation)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Department)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Department)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PositionHeld)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PositionHeld)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Responsibilities)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Responsibilities)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.From)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.From)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.To)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.To)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PersonalInformation.FathersName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PersonalInformation.FathersName)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

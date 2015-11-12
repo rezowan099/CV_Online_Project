@@ -1,0 +1,74 @@
+﻿@model CV_Online.Models.Education
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>Education</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ExamDegreeTitle)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ExamDegreeTitle)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Result)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Result)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Scale)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Scale)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.YearOfPassing)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.YearOfPassing)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Duration)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Duration)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Achievement)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Achievement)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PersonalInformation.FathersName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PersonalInformation.FathersName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ConcentrationMajorGroup.Type)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ConcentrationMajorGroup.Type)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

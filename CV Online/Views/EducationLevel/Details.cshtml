@@ -1,0 +1,22 @@
+﻿@model CV_Online.Models.EducationLevel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Education Level Details</h2>
+
+<fieldset>
+    <legend>EducationLevel</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Level)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Level)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

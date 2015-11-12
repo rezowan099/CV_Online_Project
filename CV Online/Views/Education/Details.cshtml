@@ -1,0 +1,68 @@
+﻿@model CV_Online.Models.Education
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Educational Informaion of @Html.DisplayFor(model => model.PersonalInformation.FirstName) @Html.DisplayFor(model => model.PersonalInformation.MiddleName) @Html.DisplayFor(model => model.PersonalInformation.LastName) </h2>
+
+<fieldset>
+    <legend>Educational</legend>
+    <table>
+    <tr>
+        <td style="font-weight:bold">@Html.DisplayNameFor(model => model.EducationLevel)</td>
+        <td style="font-weight:bold">:</td>
+        <td>@Html.DisplayFor(model => model.EducationLevel.Level)</td>
+    </tr>
+    <tr>
+        <td style="font-weight:bold">@Html.DisplayNameFor(model => model.ConcentrationMajorGroup)</td>
+        <td style="font-weight:bold">:</td>
+        <td>@Html.DisplayFor(model => model.ConcentrationMajorGroup.Type)</td>
+    </tr>
+    <tr>
+        <td style="font-weight:bold">@Html.DisplayNameFor(model => model.Institution)</td>
+        <td style="font-weight:bold">:</td>
+        <td>@Html.DisplayFor(model => model.Institution.Name)</td>
+    </tr>
+    <tr>
+        <td style="font-weight:bold">@Html.DisplayNameFor(model => model.Location)</td>
+        <td style="font-weight:bold">:</td>
+        <td>@Html.DisplayFor(model => model.Location)</td>
+    </tr>
+    <tr>
+        <td style="font-weight:bold">@Html.DisplayNameFor(model => model.ExamDegreeTitle)</td>
+        <td style="font-weight:bold">:</td>
+        <td>@Html.DisplayFor(model => model.ExamDegreeTitle)</td>
+    </tr>
+    <tr>
+        <td style="font-weight:bold">@Html.DisplayNameFor(model => model.Result)</td>
+        <td style="font-weight:bold">:</td>
+        <td>@Html.DisplayFor(model => model.Result)</td>
+    </tr>
+    <tr>
+        <td style="font-weight:bold">@Html.DisplayNameFor(model => model.Scale)</td>
+        <td style="font-weight:bold">:</td>
+        <td>@Html.DisplayFor(model => model.Scale)</td>
+    </tr>
+    <tr>
+        <td style="font-weight:bold">@Html.DisplayNameFor(model => model.YearOfPassing)</td>
+        <td style="font-weight:bold">:</td>
+        <td>@Html.DisplayFor(model => model.YearOfPassing)</td>
+    </tr>
+    <tr>
+        <td style="font-weight:bold">@Html.DisplayNameFor(model => model.Duration)</td>
+        <td style="font-weight:bold">:</td>
+        <td>@Html.DisplayFor(model => model.Duration)</td>
+    </tr>
+    <tr>
+        <td style="font-weight:bold">@Html.DisplayNameFor(model => model.Achievement)</td>
+        <td style="font-weight:bold">:</td>
+        <td>@Html.DisplayFor(model => model.Achievement)</td>
+    </tr>
+    </table>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Add New", "Create", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

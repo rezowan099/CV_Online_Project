@@ -1,0 +1,188 @@
+﻿@model CV_Online.Models.PersonalInformation
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>PersonalInformation</legend>
+
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.FirstName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.FirstName)
+    </div>
+    
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.MiddleName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MiddleName)
+    </div>
+    
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.LastName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.LastName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.FathersName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.FathersName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.MothersName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MothersName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DateOfBirth)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DateOfBirth)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Nationality)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Nationality)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.NationalIdNo)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.NationalIdNo)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PresentAddress)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PresentAddress)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PermanentAddress)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PermanentAddress)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CurrentLocation)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CurrentLocation)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.MobilePhone)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MobilePhone)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.HomePhone)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.HomePhone)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.OfficePhone)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.OfficePhone)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Email)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Email)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.AlternateEmail)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.AlternateEmail)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PresentSalary)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PresentSalary)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ExpectedSalary)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ExpectedSalary)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Photo)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Photo)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CareerObjective)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CareerObjective)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CareerSummary)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CareerSummary)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Gender.Type)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Gender.Type)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.MaritalStatus.Status)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MaritalStatus.Status)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.UserProfile.UserName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.UserProfile.UserName)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

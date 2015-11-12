@@ -1,0 +1,71 @@
+﻿@model CV_Online.Models.Training
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Training</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.TrainingTitle)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TrainingTitle)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.TopicsCovered)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TopicsCovered)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Institute)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Institute)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Country)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Country)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Location)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Location)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.TrainingCompletionYear)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TrainingCompletionYear)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Duration)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Duration)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PersonalInformation.FathersName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PersonalInformation.FathersName)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

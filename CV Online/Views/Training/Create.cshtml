@@ -1,0 +1,84 @@
+﻿@model CV_Online.Models.Training
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Add Training</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+    @Html.AntiForgeryToken()
+
+    <fieldset>
+        <legend>Training</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.TrainingTitle)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.TrainingTitle)
+            @Html.ValidationMessageFor(model => model.TrainingTitle)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.TopicsCovered)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.TopicsCovered)
+            @Html.ValidationMessageFor(model => model.TopicsCovered)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Institute)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Institute)
+            @Html.ValidationMessageFor(model => model.Institute)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Country)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Country)
+            @Html.ValidationMessageFor(model => model.Country)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Location)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Location)
+            @Html.ValidationMessageFor(model => model.Location)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.TrainingCompletionYear)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.TrainingCompletionYear)
+            @Html.ValidationMessageFor(model => model.TrainingCompletionYear)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Duration)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Duration)
+            @Html.ValidationMessageFor(model => model.Duration)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

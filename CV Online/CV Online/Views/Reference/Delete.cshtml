@@ -1,0 +1,88 @@
+﻿@model CV_Online.Models.Reference
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>Reference</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Name)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Organization)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Organization)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Designation)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Designation)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Address)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Address)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Email)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Email)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Relation)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Relation)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PhoneOffice)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PhoneOffice)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PhoneResidence)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PhoneResidence)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Mobile)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Mobile)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PersonalInformation.FathersName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PersonalInformation.FathersName)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

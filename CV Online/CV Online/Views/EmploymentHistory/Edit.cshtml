@@ -1,0 +1,101 @@
+﻿@model CV_Online.Models.EmploymentHistory
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>EmploymentHistory</legend>
+
+        @Html.HiddenFor(model => model.Id)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CompanyName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CompanyName)
+            @Html.ValidationMessageFor(model => model.CompanyName)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CompanyBusiness)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CompanyBusiness)
+            @Html.ValidationMessageFor(model => model.CompanyBusiness)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CompanyLocation)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CompanyLocation)
+            @Html.ValidationMessageFor(model => model.CompanyLocation)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Department)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Department)
+            @Html.ValidationMessageFor(model => model.Department)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.PositionHeld)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.PositionHeld)
+            @Html.ValidationMessageFor(model => model.PositionHeld)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Responsibilities)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Responsibilities)
+            @Html.ValidationMessageFor(model => model.Responsibilities)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.From)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.From)
+            @Html.ValidationMessageFor(model => model.From)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.To)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.To)
+            @Html.ValidationMessageFor(model => model.To)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.PersonalInfoId, "PersonalInformation")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("PersonalInfoId", String.Empty)
+            @Html.ValidationMessageFor(model => model.PersonalInfoId)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

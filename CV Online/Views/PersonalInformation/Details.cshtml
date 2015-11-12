@@ -1,0 +1,113 @@
+﻿@model CV_Online.Models.PersonalInformation
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Personal Information of @Html.DisplayFor(model => model.FirstName) @Html.DisplayFor(model => model.MiddleName) @Html.DisplayFor(model => model.LastName) </h2>
+
+<fieldset>
+    <legend>PersonalInformation</legend>
+    <table>
+    <tr>
+        <td style="font-weight:bold">@Html.DisplayNameFor(model => model.FirstName)</td>
+        <td style="font-weight:bold">:</td>
+        <td>@Html.DisplayFor(model => model.FirstName)</td>
+    </tr>
+    <tr>
+        <td style="font-weight:bold">@Html.DisplayNameFor(model => model.MiddleName)</td>
+        <td style="font-weight:bold">:</td>
+        <td>@Html.DisplayFor(model => model.MiddleName)</td>
+    </tr>
+    <tr>
+        <td style="font-weight:bold">@Html.DisplayNameFor(model => model.LastName)</td>
+        <td style="font-weight:bold">:</td>
+        <td>@Html.DisplayFor(model => model.LastName)</td>
+    </tr>
+    <tr>
+        <td style="font-weight:bold">@Html.DisplayNameFor(model => model.FathersName)</td>
+        <td style="font-weight:bold">:</td>
+        <td>@Html.DisplayFor(model => model.FathersName)</td>
+    </tr>
+    <tr>
+        <td style="font-weight:bold">@Html.DisplayNameFor(model => model.MothersName)</td>
+        <td style="font-weight:bold">:</td>
+        <td>@Html.DisplayFor(model => model.MothersName)</td>
+    </tr>
+
+
+    <tr>
+        <td style="font-weight:bold">@Html.DisplayNameFor(model => model.DateOfBirth)</td>
+        <td style="font-weight:bold">:</td>
+        <td>@Html.DisplayFor(model => model.DateOfBirth)</td>
+    </tr>
+    <tr>
+        <td style="font-weight:bold">@Html.DisplayNameFor(model => model.Gender)</td>
+        <td style="font-weight:bold">:</td>
+        <td>@Html.DisplayFor(model => model.Gender.Type)</td>
+    </tr>
+    <tr>
+        <td style="font-weight:bold">@Html.DisplayNameFor(model => model.MaritalStatus)</td>
+        <td style="font-weight:bold">:</td>
+        <td>@Html.DisplayFor(model => model.MaritalStatus.Status)</td>
+    </tr>
+    <tr>
+        <td style="font-weight:bold">@Html.DisplayNameFor(model => model.Nationality)</td>
+        <td style="font-weight:bold">:</td>
+        <td>@Html.DisplayFor(model => model.Nationality)</td>
+    </tr>
+        <tr>
+        <td style="font-weight:bold">@Html.DisplayNameFor(model => model.NationalIdNo)</td>
+        <td style="font-weight:bold">:</td>
+        <td>@Html.DisplayFor(model => model.NationalIdNo)</td>
+    </tr>
+    <tr>
+        <td style="font-weight:bold">@Html.DisplayNameFor(model => model.PresentAddress)</td>
+        <td style="font-weight:bold">:</td>
+        <td>@Html.DisplayFor(model => model.PresentAddress)</td>
+    </tr>
+    <tr>
+        <td style="font-weight:bold">@Html.DisplayNameFor(model => model.PermanentAddress)</td>
+        <td style="font-weight:bold">:</td>
+        <td>@Html.DisplayFor(model => model.PermanentAddress)</td>
+    </tr>
+
+    <tr>
+        <td style="font-weight:bold">@Html.DisplayNameFor(model => model.CurrentLocation)</td>
+        <td style="font-weight:bold">:</td>
+        <td>@Html.DisplayFor(model => model.CurrentLocation)</td>
+    </tr>
+    <tr>
+        <td style="font-weight:bold">@Html.DisplayNameFor(model => model.MobilePhone)</td>
+        <td style="font-weight:bold">:</td>
+        <td>@Html.DisplayFor(model => model.MobilePhone)</td>
+    </tr>
+    <tr>
+        <td style="font-weight:bold">@Html.DisplayNameFor(model => model.HomePhone)</td>
+        <td style="font-weight:bold">:</td>
+        <td>@Html.DisplayFor(model => model.HomePhone)</td>
+    </tr>
+        <tr>
+        <td style="font-weight:bold">@Html.DisplayNameFor(model => model.OfficePhone)</td>
+        <td style="font-weight:bold">:</td>
+        <td>@Html.DisplayFor(model => model.OfficePhone)</td>
+    </tr>
+
+    <tr>
+        <td style="font-weight:bold">@Html.DisplayNameFor(model => model.Email)</td>
+        <td style="font-weight:bold">:</td>
+        <td>@Html.DisplayFor(model => model.Email)</td>
+    </tr>
+    <tr>
+        <td style="font-weight:bold">@Html.DisplayNameFor(model => model.AlternateEmail)</td>
+        <td style="font-weight:bold">:</td>
+        <td>@Html.DisplayFor(model => model.AlternateEmail)</td>
+    </tr>
+
+    </table>
+
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @*@Html.ActionLink("Back to List", "Index")*@
+</p>

@@ -1,0 +1,85 @@
+﻿@model CV_Online.Models.Reference
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Reference Details of @Html.DisplayFor(model => model.PersonalInformation.FirstName) @Html.DisplayFor(model => model.PersonalInformation.MiddleName) @Html.DisplayFor(model => model.PersonalInformation.LastName)</h2>
+
+<fieldset>
+    <legend>Reference</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Name)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Organization)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Organization)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Designation)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Designation)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Address)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Address)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Email)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Email)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Relation)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Relation)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PhoneOffice)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PhoneOffice)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PhoneResidence)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PhoneResidence)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Mobile)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Mobile)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PersonalInformation.FathersName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PersonalInformation.FathersName)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

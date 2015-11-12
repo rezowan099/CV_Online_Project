@@ -1,0 +1,75 @@
+﻿@model CV_Online.Models.ProfessionalQualification
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>ProfessionalQualification</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Institute)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Institute)
+            @Html.ValidationMessageFor(model => model.Institute)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Location)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Location)
+            @Html.ValidationMessageFor(model => model.Location)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.From)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.From)
+            @Html.ValidationMessageFor(model => model.From)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.To)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.To)
+            @Html.ValidationMessageFor(model => model.To)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CertificationId, "Certification")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("CertificationId", String.Empty)
+            @Html.ValidationMessageFor(model => model.CertificationId)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.PersonalInfoId, "PersonalInformation")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("PersonalInfoId", String.Empty)
+            @Html.ValidationMessageFor(model => model.PersonalInfoId)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

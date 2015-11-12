@@ -1,0 +1,37 @@
+﻿@model CV_Online.Models.Specialization
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Specialization Details of @Html.DisplayFor(model => model.PersonalInformation.FirstName) @Html.DisplayFor(model => model.PersonalInformation.MiddleName) @Html.DisplayFor(model => model.PersonalInformation.LastName)</h2>
+
+<fieldset>
+    <legend>Specialization</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.FieldsOfSpecialization)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.FieldsOfSpecialization)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Description)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Description)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ExtracurricularActivities)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ExtracurricularActivities)
+    </div>
+
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

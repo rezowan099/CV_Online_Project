@@ -1,0 +1,68 @@
+﻿@model CV_Online.Models.EmploymentHistory
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Employment History of @Html.DisplayFor(model => model.PersonalInformation.FirstName) @Html.DisplayFor(model => model.PersonalInformation.MiddleName) @Html.DisplayFor(model => model.PersonalInformation.LastName)</h2>
+
+<fieldset>
+    <legend>EmploymentHistory</legend>
+    <table>
+        <tr>
+            <td style="font-weight:bold">@Html.DisplayNameFor(model => model.CompanyName)</td>
+            <td style="font-weight:bold">:</td>
+            <td>@Html.DisplayFor(model => model.CompanyName)</td>
+        </tr>
+        <tr>
+            <td style="font-weight:bold">@Html.DisplayNameFor(model => model.CompanyBusiness)</td>
+            <td style="font-weight:bold">:</td>
+            <td>@Html.DisplayFor(model => model.CompanyBusiness)</td>
+        </tr>
+        <tr>
+            <td style="font-weight:bold">@Html.DisplayNameFor(model => model.CompanyLocation)</td>
+            <td style="font-weight:bold">:</td>
+            <td>@Html.DisplayFor(model => model.CompanyLocation)</td>
+        </tr>
+        <tr>
+            <td style="font-weight:bold">@Html.DisplayNameFor(model => model.Department)</td>
+            <td style="font-weight:bold">:</td>
+            <td>@Html.DisplayFor(model => model.Department)</td>
+        </tr>
+        <tr>
+            <td style="font-weight:bold">@Html.DisplayNameFor(model => model.PositionHeld)</td>
+            <td style="font-weight:bold">:</td>
+            <td>@Html.DisplayFor(model => model.PositionHeld)</td>
+        </tr>
+        <tr>
+            <td style="font-weight:bold">@Html.DisplayNameFor(model => model.Responsibilities)</td>
+            <td style="font-weight:bold">:</td>
+            <td>@Html.DisplayFor(model => model.Responsibilities)</td>
+        </tr>
+        <tr>
+            <td style="font-weight:bold">@Html.DisplayNameFor(model => model.From)</td>
+            <td style="font-weight:bold">:</td>
+            <td>@Html.DisplayFor(model => model.From)</td>
+        </tr>
+        <tr>
+            @if(Model.IsContinue)
+            {
+                <td style="font-weight:bold">@Html.DisplayNameFor(model => model.To)</td>
+                <td style="font-weight:bold">:</td>
+                <td>Present</td>
+            }
+            else
+            {
+                <td style="font-weight:bold">@Html.DisplayNameFor(model => model.To)</td>
+                <td style="font-weight:bold">:</td>
+                <td>@Html.DisplayFor(model => model.To)</td>   
+            }
+        </tr>
+    </table>
+   
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Add New", "Create", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

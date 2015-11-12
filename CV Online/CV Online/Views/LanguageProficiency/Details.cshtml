@@ -1,0 +1,43 @@
+﻿@model CV_Online.Models.LanguageProficiency
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>LanguageProficiency</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Reading)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Reading)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Writing)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Writing)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Speaking)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Speaking)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Language.Name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Language.Name)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

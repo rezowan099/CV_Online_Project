@@ -1,0 +1,36 @@
+﻿@model CV_Online.Models.Certification
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Certification Details</h2>
+
+<fieldset>
+    <legend>Certification</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Title)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Title)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Other)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Other)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Institution.Name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Institution.Name)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

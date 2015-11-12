@@ -1,0 +1,110 @@
+﻿@model CV_Online.Models.Education
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit Educational Informaion of @Html.DisplayFor(model => model.PersonalInformation.FirstName) @Html.DisplayFor(model => model.PersonalInformation.MiddleName) @Html.DisplayFor(model => model.PersonalInformation.LastName)</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Edit Education</legend>
+
+        @Html.HiddenFor(model => model.Id)
+        @Html.HiddenFor(model => model.PersonalInfoId)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.EducationLevelId, "Education Level")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("EducationLevelId", String.Empty)
+            @Html.ValidationMessageFor(model => model.EducationLevelId)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ConcentrationMajorGroupId, @"Concentration\Major\Group")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("ConcentrationMajorGroupId", String.Empty)
+            @Html.ValidationMessageFor(model => model.ConcentrationMajorGroupId)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.InstitutionId, "Institution")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("InstitutionId", String.Empty)
+            @Html.ValidationMessageFor(model => model.InstitutionId)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Location)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Location)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ExamDegreeTitle)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ExamDegreeTitle)
+            @Html.ValidationMessageFor(model => model.ExamDegreeTitle)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Result)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Result)
+            @Html.ValidationMessageFor(model => model.Result)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Scale)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Scale)
+            @Html.ValidationMessageFor(model => model.Scale)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.YearOfPassing)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.YearOfPassing)
+            @Html.ValidationMessageFor(model => model.YearOfPassing)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Duration)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Duration)
+            @Html.ValidationMessageFor(model => model.Duration)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Achievement)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Achievement)
+            @Html.ValidationMessageFor(model => model.Achievement)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
